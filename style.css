@@ -1,0 +1,308 @@
+/* CONFIGURAÇÕES GERAIS - ESTILO RASCUNHO À MÃO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Courier New', sans-serif;
+    color: var(--texto-principal);
+}
+
+:root {
+    --fundo-pagina: #f7f5f0;
+    --texto-principal: #444444;
+    --texto-secundario: #666666;
+    --texto-suave: #555555;
+    --texto-placeholder: #888888;
+    --borda-principal: #444444;
+    --borda-secundaria: #555555;
+    --borda-suave: #888888;
+    --borda-tracejada: #777777;
+    --fundo-card: #ffffff;
+    --fundo-papel: #eeebe3;
+    --fundo-input: #ffffff;
+    --fundo-imagem: #fafafa;
+    --sombra-cor: #444444;
+}
+
+body {
+    background-color: var(--fundo-pagina);
+    padding: 40px 0;
+    transition: background-color 0.3s ease;
+}
+
+body.modo-dark {
+    --fundo-pagina: #1a1a22;
+    --texto-principal: #e8e4dc;
+    --texto-secundario: #c4bfb5;
+    --texto-suave: #b8b3a8;
+    --texto-placeholder: #9a958a;
+    --borda-principal: #d4af37;
+    --borda-secundaria: #c9a227;
+    --borda-suave: #a89030;
+    --borda-tracejada: #8a7840;
+    --fundo-card: #252530;
+    --fundo-papel: #2a2a35;
+    --fundo-input: #2e2e3a;
+    --fundo-imagem: #303040;
+    --sombra-cor: #000000;
+}
+
+/* CONTAINER FIXO - SEM RESPONSIVIDADE */
+.container-fixo {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ESPAÇAMENTO E RESPIRO */
+.secao-rascunho {
+    margin: 70px 0; /* Espaço vazio generoso para o layout respirar */
+    padding: 20px;
+}
+
+.bkg-papel {
+    background-color: var(--fundo-papel);
+    border-radius: 8px;
+    border: 1px dashed var(--borda-suave);
+}
+
+h3 {
+    margin-bottom: 35px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* BOTÕES E INPUTS ARTESANAIS */
+.botao-falso {
+    border: 2px solid var(--borda-principal);
+    padding: 10px 20px;
+    display: inline-block;
+    background: var(--fundo-card);
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px var(--sombra-cor);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.input-falso {
+    border: 2px dashed var(--borda-tracejada);
+    padding: 12px;
+    background: var(--fundo-input);
+    color: var(--texto-placeholder);
+    flex-grow: 1;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+/* CABEÇALHO FIXO */
+.header-rascunho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 3px dashed var(--borda-secundaria);
+    margin-bottom: 20px;
+}
+
+.logo-box {
+    transform: rotate(-1deg);
+}
+
+.logo-box img,
+.logo-footer {
+    height: 82px;
+    width: auto;
+    display: block;
+}
+
+body.modo-dark .logo-box {
+    background: transparent;
+}
+
+.nav-rascunho {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+}
+
+.nav-rascunho span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.botao-modo-dark {
+    transform: rotate(1deg);
+    margin-left: 5px;
+}
+
+/* HERO / BANNER PRINCIPAL FIXO */
+.hero-rascunho {
+    border: 3px dashed var(--borda-suave);
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 0;
+    aspect-ratio: 11 / 4;
+}
+
+.hero-imagem {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+.grid-destinos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-destino {
+    border: 2px solid var(--borda-principal);
+    width: 340px;
+    padding: 20px;
+    background: var(--fundo-card);
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px var(--sombra-cor);
+    text-align: center;
+}
+
+.imagem-box {
+    border: 2px dashed var(--borda-suave);
+    height: 170px;
+    margin-bottom: 20px;
+    background: var(--fundo-imagem);
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.imagem-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-destino h4 {
+    margin-bottom: 10px;
+}
+
+.card-destino p {
+    margin-bottom: 20px;
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+}
+
+/* SEÇÃO 2: VANTAGENS FIXO */
+.grid-vantagens {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-vantagem {
+    width: 320px; /* Largura estritamente fixa */
+    text-align: center;
+    padding: 15px;
+}
+
+.icone-box {
+    border: 2px solid var(--borda-principal);
+    width: 80px;
+    height: 80px;
+    line-height: 76px;
+    font-size: 2rem;
+    margin: 0 auto 20px auto;
+    background: var(--fundo-card);
+    border-radius: 50%;
+}
+
+.card-vantagem h4 {
+    margin-bottom: 12px;
+}
+
+.card-vantagem p {
+    font-size: 0.95rem;
+    color: var(--texto-secundario);
+    line-height: 1.4;
+}
+
+.depoimento-box {
+    border: 2px solid var(--borda-principal);
+    padding: 35px;
+    background: var(--fundo-card);
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px var(--sombra-cor);
+    position: relative;
+}
+
+.aspas {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.cliente-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar-falso {
+    border: 2px dashed var(--borda-suave);
+    width: 50px;
+    height: 50px;
+    background: var(--fundo-imagem);
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.avatar-falso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.logo-footer {
+    margin-bottom: 15px;
+}
+
+/* RODAPÉ FIXO */
+.footer-rascunho {
+    margin-top: 80px;
+    border-top: 3px dashed var(--borda-secundaria);
+    padding: 50px 10px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coluna-footer {
+    width: 240px; /* Largura estritamente fixa */
+}
+
+.coluna-footer strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.coluna-footer p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+}
+
+.coluna-footer .input-falso {
+    margin-bottom: 12px;
+    display: block;
+    width: 100%;
+}
+
+.coluna-footer .botao-falso {
+    width: 100%;
+}

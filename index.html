@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Rascunho - Aerotec Agência de Viagens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container-fixo">
+        
+        <header class="header-rascunho">
+            <div class="logo-box">
+                <img id="logo-header" class="logo-img tema-img" src="images/logo.webp" data-claro="images/logo.webp" data-escuro="images/logo%20dark.webp" alt="Logo Aerotec">
+            </div>
+            <nav class="nav-rascunho">
+                <span>[ INICIO ]</span>
+                <a href="#destinos" style="text-decoration: none; color: inherit;"><span>[ Para Onde Ir? ]</span></a>
+                <a href="historia.html" style="text-decoration: none; color: inherit;"><span>[ Nossa História ]</span></a>
+                <a href="#contato" style="text-decoration: none; color: inherit;"><span>[ Fale Conosco ]</span></a>
+                <button type="button" id="botao-modo-dark" class="botao-falso botao-modo-dark">[ Modo Dark ]</button>
+            </nav>
+        </header>
+
+        <section class="hero-rascunho">
+            <img id="hero-banner" class="hero-imagem tema-img" src="images/banner.webp" data-claro="images/banner.webp" data-escuro="images/banner%20dark.webp" alt="Banner Aerotec">
+        </section>
+
+        <section id="destinos" class="secao-rascunho">
+            <h3>📌 Destinos que o pessoal mais está amando:</h3>
+            <div class="grid-destinos">
+                <div class="card-destino">
+                    <div class="imagem-box">
+                        <img src="images/pag.europa.webp" alt="Foto da Praia X">
+                    </div>
+                    <h4>[ Europa ]</h4>
+                    <p>[ Quanto custa + o que inclui ]</p>
+                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                </div>
+                <div class="card-destino">
+                    <div class="imagem-box">
+                        <img src="images/pag.brasil.webp" alt="Foto da Cidade Y">
+                    </div>
+                    <h4>[ Brasil ]</h4>
+                    <p>[ Quanto custa + o que inclui ]</p>
+                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                </div>
+                <div class="card-destino">
+                    <div class="imagem-box">
+                        <img src="images/pag.asia.webp" alt="Foto da Montanha Z">
+                    </div>
+                    <h4>[ Asia ]</h4>
+                    <p>[ Quanto custa + o que inclui ]</p>
+                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-rascunho bkg-papel">
+            <h3>💡 Por que planejar sua aventura com a gente?</h3>
+            <div class="grid-vantagens">
+                <div class="card-vantagem">
+                    <div class="icone-box">☕</div>
+                    <h4>[ Sem dor de cabeça ]</h4>
+                    <p>[ A gente cuida de toda a burocracia para você só curtir o café ]</p>
+                </div>
+                <div class="card-vantagem">
+                    <div class="icone-box">🗺️</div>
+                    <h4>[ Roteiros de verdade ]</h4>
+                    <p>[ Nada de passeios robóticos. Dicas de quem realmente conhece o lugar ]</p>
+                </div>
+                <div class="card-vantagem">
+                    <div class="icone-box">🛎️</div>
+                    <h4>[ Estamos contigo ]</h4>
+                    <p>[ Se o voo atrasar de madrugada, vai ter alguém para te atender ]</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-rascunho">
+            <h3>💬 O que andam dizendo sobre nós:</h3>
+            <div class="depoimento-box">
+                <p class="aspas">"Consegui escolher o destino e comparar as melhores opções de hospedagem sem perder horas, Facilitou muito a viagem! ✈️"</p>
+                <div class="cliente-info">
+                    <div class="avatar-falso">
+                        <img src="images/lucas avaliador.webp" alt="Foto do cliente">
+                    </div>
+                    <span>- Lucas oliveira, viajou para o Atacama</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-rascunho">
+            <div class="coluna-footer">
+                <img id="logo-footer" class="logo-footer logo-img tema-img" src="images/logo.webp" data-claro="images/logo.webp" data-escuro="images/logo%20dark.webp" alt="Logo Aerotec">
+                <p>Aerotec Agência de Viagens</p>
+            </div>
+            <div class="coluna-footer">
+                <strong>Links Importantes</strong>
+                <p>• <a href="contratos.html" style="text-decoration: none; color: inherit;">Contratos e Regras</a></p>
+                <p>• <a href="politicas.html" style="text-decoration: none; color: inherit;">Políticas de Cancelamento</a></p>
+            </div>
+            <div class="coluna-footer">
+                <strong>Onde nos achar</strong>
+                <p>• @Aerotec-agencia</p>
+                <p>• /Aerotec-agencia</p>
+            </div>
+            <div id="contato" class="coluna-footer">
+                <strong>[ Receba nossas cartas ]</strong>
+                <div class="input-falso">[ Seu melhor e-mail... ]</div>
+                <div class="botao-falso">[ Quero receber ]</div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const botaoModoDark = document.getElementById('botao-modo-dark');
+        const imagensTema = document.querySelectorAll('.tema-img');
+
+        botaoModoDark.addEventListener('click', () => {
+            const ativarDark = !document.body.classList.contains('modo-dark');
+            document.body.classList.toggle('modo-dark', ativarDark);
+
+            imagensTema.forEach((img) => {
+                img.src = ativarDark ? img.dataset.escuro : img.dataset.claro;
+            });
+
+            botaoModoDark.textContent = ativarDark ? '[ Modo Claro ]' : '[ Modo Dark ]';
+        });
+    </script>
+
+</body>
+</html>

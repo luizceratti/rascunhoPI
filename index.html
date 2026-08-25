@@ -8,17 +8,20 @@
 </head>
 <body>
 
-    <div class="container-fixo">
+    <div class="container-fixo" id="inicio">
         
         <header class="header-rascunho">
-            <div class="logo-box">
-                <img id="logo-header" class="logo-img tema-img" src="images/logo.webp" data-claro="images/logo.webp" data-escuro="images/logo%20dark.webp" alt="Logo Aerotec">
+            <div class="header-topo">
+                <div class="logo-box">
+                    <img id="logo-header" class="logo-img tema-img" src="images/logo.webp" data-claro="images/logo.webp" data-escuro="images/logo%20dark.webp" alt="Logo Aerotec">
+                </div>
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-principal">[ Menu ]</button>
             </div>
-            <nav class="nav-rascunho">
-                <span>[ INICIO ]</span>
-                <a href="#destinos" style="text-decoration: none; color: inherit;"><span>[ Para Onde Ir? ]</span></a>
-                <a href="historia.html" style="text-decoration: none; color: inherit;"><span>[ Nossa História ]</span></a>
-                <a href="#contato" style="text-decoration: none; color: inherit;"><span>[ Fale Conosco ]</span></a>
+            <nav class="nav-rascunho" id="nav-principal">
+                <a href="#inicio">[ INICIO ]</a>
+                <a href="#destinos">[ Para Onde Ir? ]</a>
+                <a href="historia.html">[ Nossa História ]</a>
+                <a href="#contato">[ Fale Conosco ]</a>
                 <button type="button" id="botao-modo-dark" class="botao-falso botao-modo-dark">[ Modo Dark ]</button>
             </nav>
         </header>
@@ -208,6 +211,25 @@
 
         carrossel.querySelector('[data-carrossel-prev]').addEventListener('click', () => irParaSlide(indiceAtual - 1));
         carrossel.querySelector('[data-carrossel-next]').addEventListener('click', () => irParaSlide(indiceAtual + 1));
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navPrincipal = document.getElementById('nav-principal');
+
+        menuToggle.addEventListener('click', () => {
+            const aberto = navPrincipal.classList.toggle('aberto');
+            menuToggle.setAttribute('aria-expanded', String(aberto));
+            menuToggle.textContent = aberto ? '[ Fechar ]' : '[ Menu ]';
+        });
+
+        navPrincipal.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (window.matchMedia('(max-width: 768px)').matches) {
+                    navPrincipal.classList.remove('aberto');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.textContent = '[ Menu ]';
+                }
+            });
+        });
     </script>
 
 </body>

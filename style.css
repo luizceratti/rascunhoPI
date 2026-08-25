@@ -229,6 +229,72 @@ body.modo-dark .logo-box {
     line-height: 1.4;
 }
 
+.carrossel-depoimentos {
+    position: relative;
+}
+
+.carrossel-linha {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.carrossel-viewport {
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+
+.carrossel-trilha {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carrossel-trilha .depoimento-box {
+    flex: 0 0 100%;
+    min-height: 210px;
+}
+
+.carrossel-seta {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border: 2px solid var(--borda-principal);
+    background: var(--fundo-card);
+    box-shadow: 2px 2px 0px var(--sombra-cor);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-family: inherit;
+    color: var(--texto-principal);
+}
+
+.carrossel-seta:hover {
+    transform: translateY(-1px);
+}
+
+.carrossel-pontos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.carrossel-ponto {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 2px solid var(--borda-principal);
+    background: var(--fundo-card);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carrossel-ponto.ativo {
+    background: var(--borda-principal);
+}
+
 .depoimento-box {
     border: 2px solid var(--borda-principal);
     padding: 35px;
@@ -266,6 +332,16 @@ body.modo-dark .logo-box {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.avatar-iniciais {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
 }
 
 .logo-footer {
@@ -306,3 +382,32 @@ body.modo-dark .logo-box {
 .coluna-footer .botao-falso {
     width: 100%;
 }
+/* Responsividade forçada para celular */
+@media (max-width: 768px) {
+
+    /* Força os 3 cards de destinos a ficarem um abaixo do outro */
+    .grid-destinos {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 20px !important;
+    }
+  
+    .card-destino {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  
+    /* Força as colunas do rodapé a empilharem */
+    .footer-rascunho {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      gap: 20px !important;
+    }
+  
+    .coluna-footer {
+      width: 100% !important;
+    }
+  }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Meu Rascunho - Aerotec Agência de Viagens</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -25,34 +26,49 @@
         <section class="hero-rascunho">
             <img id="hero-banner" class="hero-imagem tema-img" src="images/banner.webp" data-claro="images/banner.webp" data-escuro="images/banner%20dark.webp" alt="Banner Aerotec">
         </section>
-
         <section id="destinos" class="secao-rascunho">
             <h3>📌 Destinos que o pessoal mais está amando:</h3>
             <div class="grid-destinos">
+        
+                <!-- Card Europa -->
                 <div class="card-destino">
                     <div class="imagem-box">
-                        <img src="images/pag.europa.webp" alt="Foto da Praia X">
+                        <picture>
+                            <source srcset="images/pag.europa_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/pag.europa.webp" alt="Europa">
+                        </picture>
                     </div>
                     <h4>[ Europa ]</h4>
                     <p>[ Quanto custa + o que inclui ]</p>
                     <div class="botao-falso">[ Quero dar uma olhada ]</div>
                 </div>
+        
+                <!-- Card Brasil -->
                 <div class="card-destino">
                     <div class="imagem-box">
-                        <img src="images/pag.brasil.webp" alt="Foto da Cidade Y">
+                        <picture>
+                            <source srcset="images/pag.brasil_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/pag.brasil.webp" alt="Brasil">
+                        </picture>
                     </div>
                     <h4>[ Brasil ]</h4>
                     <p>[ Quanto custa + o que inclui ]</p>
                     <div class="botao-falso">[ Quero dar uma olhada ]</div>
                 </div>
+        
+                <!-- Card Ásia -->
                 <div class="card-destino">
                     <div class="imagem-box">
-                        <img src="images/pag.asia.webp" alt="Foto da Montanha Z">
+                        <picture>
+                            <source srcset="images/pag.asia_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/pag.asia.webp" alt="Ásia">
+                        </picture>
                     </div>
                     <h4>[ Asia ]</h4>
                     <p>[ Quanto custa + o que inclui ]</p>
                     <div class="botao-falso">[ Quero dar uma olhada ]</div>
                 </div>
+        
             </div>
         </section>
 
@@ -79,14 +95,52 @@
 
         <section class="secao-rascunho">
             <h3>💬 O que andam dizendo sobre nós:</h3>
-            <div class="depoimento-box">
-                <p class="aspas">"Consegui escolher o destino e comparar as melhores opções de hospedagem sem perder horas, Facilitou muito a viagem! ✈️"</p>
-                <div class="cliente-info">
-                    <div class="avatar-falso">
-                        <img src="images/lucas avaliador.webp" alt="Foto do cliente">
+            <div class="carrossel-depoimentos" id="carrossel-depoimentos">
+                <div class="carrossel-linha">
+                    <button type="button" class="carrossel-seta" data-carrossel-prev aria-label="Depoimento anterior">‹</button>
+                    <div class="carrossel-viewport">
+                        <div class="carrossel-trilha">
+                            <article class="depoimento-box">
+                                <p class="aspas">"Consegui escolher o destino e comparar as melhores opções de hospedagem sem perder horas, Facilitou muito a viagem! ✈️"</p>
+                                <div class="cliente-info">
+                                    <div class="avatar-falso">
+                                        <img src="images/lucas avaliador.webp" alt="Foto de Lucas Oliveira">
+                                    </div>
+                                    <span>- Lucas Oliveira, viajou para o Atacama</span>
+                                </div>
+                            </article>
+                            <article class="depoimento-box">
+                                <p class="aspas">"O roteiro na Europa foi redondo: trem, hotel e dicas de quem já conhecia a cidade. Não fiquei perdido nem um dia. 🗺️"</p>
+                                <div class="cliente-info">
+                                    <div class="avatar-falso">
+                                        <img src="images/marinaavaliadora.webp" alt="Foto de Marina Costa">
+                                    </div>
+                                    <span>- Marina Costa, viajou para Lisboa</span>
+                                </div>
+                            </article>
+                            <article class="depoimento-box">
+                                <p class="aspas">"Pedi um plano para o Japão e saiu do papel sem enrolação. Passagens, hospedagem e horários certos para não perder nada. 🏯"</p>
+                                <div class="cliente-info">
+                                    <div class="avatar-falso">
+                                        <img src="images/rafaelavaliador.webp" alt="Foto de Rafael Santos">
+                                    </div>
+                                    <span>- Rafael Santos, viajou para Tóquio</span>
+                                </div>
+                            </article>
+                            <article class="depoimento-box">
+                                <p class="aspas">"Queria conhecer o Brasil de verdade, não só o cartão-postal. A equipe montou um roteiro leve e com gente pra atender se algo saísse do script. 🌿"</p>
+                                <div class="cliente-info">
+                                    <div class="avatar-falso">
+                                        <img src="images/pedro avaliador.webp" alt="Foto de Pedro Raul">
+                                    </div>
+                                    <span>- Pedro raul, viajou para a Chapada Diamantina</span>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                    <span>- Lucas oliveira, viajou para o Atacama</span>
+                    <button type="button" class="carrossel-seta" data-carrossel-next aria-label="Próximo depoimento">›</button>
                 </div>
+                <div class="carrossel-pontos" data-carrossel-pontos></div>
             </div>
         </section>
 
@@ -128,7 +182,33 @@
 
             botaoModoDark.textContent = ativarDark ? '[ Modo Claro ]' : '[ Modo Dark ]';
         });
+
+        const carrossel = document.getElementById('carrossel-depoimentos');
+        const trilha = carrossel.querySelector('.carrossel-trilha');
+        const slides = carrossel.querySelectorAll('.depoimento-box');
+        const pontosBox = carrossel.querySelector('[data-carrossel-pontos]');
+        let indiceAtual = 0;
+
+        slides.forEach((_, indice) => {
+            const ponto = document.createElement('button');
+            ponto.type = 'button';
+            ponto.className = 'carrossel-ponto' + (indice === 0 ? ' ativo' : '');
+            ponto.setAttribute('aria-label', 'Ir para depoimento ' + (indice + 1));
+            ponto.addEventListener('click', () => irParaSlide(indice));
+            pontosBox.appendChild(ponto);
+        });
+
+        const pontos = pontosBox.querySelectorAll('.carrossel-ponto');
+
+        function irParaSlide(indice) {
+            indiceAtual = (indice + slides.length) % slides.length;
+            trilha.style.transform = 'translateX(-' + (indiceAtual * 100) + '%)';
+            pontos.forEach((ponto, i) => ponto.classList.toggle('ativo', i === indiceAtual));
+        }
+
+        carrossel.querySelector('[data-carrossel-prev]').addEventListener('click', () => irParaSlide(indiceAtual - 1));
+        carrossel.querySelector('[data-carrossel-next]').addEventListener('click', () => irParaSlide(indiceAtual + 1));
     </script>
 
 </body>
-</html>
+</html> 

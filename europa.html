@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Destinos na Europa - Aerotec Agência de Viagens</title>
+    <meta name="description" content="Pacotes na Europa com a Aerotec: Paris, Roma, Lisboa, Barcelona, Amsterdã e Londres.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleeurope.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -10,162 +14,162 @@
 
     <div class="container-fixo" id="inicio">
         
-        <!-- Header -->
         <header class="header-rascunho">
             <div class="header-topo">
                 <div class="logo-box">
                     <img id="logo-header" class="logo-img tema-img" src="images/logo.webp" data-claro="images/logo.webp" data-escuro="images/logo%20dark.webp" alt="Logo Aerotec">
                 </div>
-                <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-principal">[ Menu ]</button>
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-principal">Menu</button>
             </div>
             <nav class="nav-rascunho" id="nav-principal">
-                <a href="index.html">[ INICIO ]</a>
-                <a href="#destinos">[ Cidades ]</a>
-                <a href="historia.html">[ Nossa História ]</a>
-                <a href="#contato">[ Fale Conosco ]</a>
-                <button type="button" id="botao-modo-dark" class="botao-falso botao-modo-dark">[ Modo Dark ]</button>
+                <a href="index.html">Início</a>
+                <a href="brasil.html">Brasil</a>
+                <a href="europa.html" class="ativo">Europa</a>
+                <a href="asia.html">Ásia</a>
+                <a href="historia.html">Nossa História</a>
+                <a href="#contato">Fale Conosco</a>
+                <button type="button" id="botao-modo-dark" class="botao-falso botao-modo-dark">Modo Dark</button>
             </nav>
         </header>
 
-        <!-- Banner Hero -->
         <section class="hero-rascunho">
             <img id="hero-banner" class="hero-imagem tema-img" src="images/banner.webp" data-claro="images/banner.webp" data-escuro="images/banner%20dark.webp" alt="Banner Europa Aerotec">
+            <div class="hero-legenda">
+                <span>Continente</span>
+                <h2>Europa</h2>
+            </div>
         </section>
 
-        <!-- Grid de Cidades da Europa -->
         <section id="destinos" class="secao-rascunho">
-            <h3>📌 Destinos na Europa que o pessoal mais está amando:</h3>
+            <h3>Cidades para atravessar a Europa</h3>
             <div class="grid-destinos">
         
-                <!-- Paris -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/paris_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/paris.webp" alt="Paris">
+                            <source srcset="images/pag.europa_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/pag.europa.webp" alt="Paris">
                         </picture>
                     </div>
-                    <h4>[ Paris ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Paris</h4>
+                    <p class="preco">A partir de R$ 9.890</p>
+                    <p class="card-desc">6 noites · aéreo, hotel no centro, transfers e cruzeiro no Sena.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
         
-                <!-- Lisboa -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/lisboa_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/lisboa.webp" alt="Lisboa">
+                            <source srcset="images/pag.europa_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/pag.europa.webp" alt="Roma">
                         </picture>
                     </div>
-                    <h4>[ Lisboa ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Roma</h4>
+                    <p class="preco">A partir de R$ 8.740</p>
+                    <p class="card-desc">5 noites · aéreo, hotel no centro histórico e visita ao Coliseu.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
         
-                <!-- Roma -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/roma_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/roma.webp" alt="Roma">
+                            <source srcset="images/pag.europa_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/pag.europa.webp" alt="Lisboa">
                         </picture>
                     </div>
-                    <h4>[ Roma ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Lisboa</h4>
+                    <p class="preco">A partir de R$ 6.590</p>
+                    <p class="card-desc">5 noites · aéreo, hotel na Baixa e passeio a Sintra.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
 
-                <!-- Londres -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/londres_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/londres.webp" alt="Londres">
+                            <source srcset="images/pag.europa_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/pag.europa.webp" alt="Barcelona">
                         </picture>
                     </div>
-                    <h4>[ Londres ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Barcelona</h4>
+                    <p class="preco">A partir de R$ 7.820</p>
+                    <p class="card-desc">5 noites · aéreo, hotel em Eixample e Sagrada Família.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
 
-                <!-- Amsterdã -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/amsterda_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/amsterda.webp" alt="Amsterdã">
+                            <source srcset="images/pag.europa_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/pag.europa.webp" alt="Amsterdã">
                         </picture>
                     </div>
-                    <h4>[ Amsterdã ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Amsterdã</h4>
+                    <p class="preco">A partir de R$ 8.150</p>
+                    <p class="card-desc">4 noites · aéreo, hotel nos canais e passeio de barco.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
 
-                <!-- Barcelona -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/barcelona_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/barcelona.webp" alt="Barcelona">
+                            <source srcset="images/pag.europa_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/pag.europa.webp" alt="Londres">
                         </picture>
                     </div>
-                    <h4>[ Barcelona ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Londres</h4>
+                    <p class="preco">A partir de R$ 10.240</p>
+                    <p class="card-desc">6 noites · aéreo, hotel na zona 1 e Travelcard de metrô.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
         
             </div>
         </section>
 
-        <!-- Vantagens da Europa -->
         <section class="secao-rascunho bkg-papel">
-            <h3>💡 Por que planejar sua viagem pela Europa com a gente?</h3>
+            <h3>Por que planejar a Europa com a gente</h3>
             <div class="grid-vantagens">
                 <div class="card-vantagem">
-                    <div class="icone-box">🏰</div>
-                    <h4>[ Roteiros Integrados ]</h4>
-                    <p>[ Conexões fáceis de trem e voos internos para você aproveitar vários países ]</p>
+                    <div class="icone-box">🚆</div>
+                    <h4>Conexões no ponto</h4>
+                    <p>Trem, voo curto e hotel combinados para você não perder a manhã.</p>
                 </div>
                 <div class="card-vantagem">
-                    <div class="icone-box">🍷</div>
-                    <h4>[ Experiências Exclusivas ]</h4>
-                    <p>[ Reservas em pontos históricos, museus e passeios fora da rota comum ]</p>
+                    <div class="icone-box">🗺️</div>
+                    <h4>Cidade no ritmo certo</h4>
+                    <p>Museu, bairro e café sem fila infinita nem passeio robótico.</p>
                 </div>
                 <div class="card-vantagem">
                     <div class="icone-box">🛎️</div>
-                    <h4>[ Suporte Internacional ]</h4>
-                    <p>[ Atendimento rápido e em português 24h durante toda a sua viagem ]</p>
+                    <h4>Suporte no fuso</h4>
+                    <p>Atendimento em português se o voo atrasar de madrugada.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Rodapé -->
         <footer class="footer-rascunho">
             <div class="coluna-footer">
                 <img id="logo-footer" class="logo-footer logo-img tema-img" src="images/logo.webp" data-claro="images/logo.webp" data-escuro="images/logo%20dark.webp" alt="Logo Aerotec">
                 <p>Aerotec Agência de Viagens</p>
             </div>
             <div class="coluna-footer">
-                <strong>Links Importantes</strong>
-                <p>• <a href="contratos.html" style="text-decoration: none; color: inherit;">Contratos e Regras</a></p>
-                <p>• <a href="politicas.html" style="text-decoration: none; color: inherit;">Políticas de Cancelamento</a></p>
+                <strong>Links importantes</strong>
+                <p>• <a href="contratos.html">Contratos e Regras</a></p>
+                <p>• <a href="politicas.html">Políticas de Cancelamento</a></p>
             </div>
             <div class="coluna-footer">
                 <strong>Onde nos achar</strong>
-                <p>• @Aerotec-agencia</p>
-                <p>• /Aerotec-agencia</p>
+                <p>• <a href="https://instagram.com/Aerotec-agencia">@Aerotec-agencia</a></p>
+                <p>• <a href="https://facebook.com/Aerotec-agencia">/Aerotec-agencia</a></p>
             </div>
             <div id="contato" class="coluna-footer">
-                <strong>[ Receba nossas cartas ]</strong>
-                <div class="input-falso">[ Seu melhor e-mail... ]</div>
-                <div class="botao-falso">[ Quero receber ]</div>
+                <strong>Receba nossas cartas</strong>
+                <input class="input-falso" type="email" name="email" placeholder="Seu melhor e-mail" autocomplete="email">
+                <button type="button" class="botao-falso">Quero receber</button>
             </div>
         </footer>
 
     </div>
 
-    <!-- Script idêntico -->
     <script>
         const botaoModoDark = document.getElementById('botao-modo-dark');
         const imagensTema = document.querySelectorAll('.tema-img');
@@ -178,7 +182,7 @@
                 img.src = ativarDark ? img.dataset.escuro : img.dataset.claro;
             });
 
-            botaoModoDark.textContent = ativarDark ? '[ Modo Claro ]' : '[ Modo Dark ]';
+            botaoModoDark.textContent = ativarDark ? 'Modo Claro' : 'Modo Dark';
         });
 
         const menuToggle = document.getElementById('menu-toggle');
@@ -187,7 +191,7 @@
         menuToggle.addEventListener('click', () => {
             const aberto = navPrincipal.classList.toggle('aberto');
             menuToggle.setAttribute('aria-expanded', String(aberto));
-            menuToggle.textContent = aberto ? '[ Fechar ]' : '[ Menu ]';
+            menuToggle.textContent = aberto ? 'Fechar' : 'Menu';
         });
 
         navPrincipal.querySelectorAll('a').forEach((link) => {
@@ -195,7 +199,7 @@
                 if (window.matchMedia('(max-width: 768px)').matches) {
                     navPrincipal.classList.remove('aberto');
                     menuToggle.setAttribute('aria-expanded', 'false');
-                    menuToggle.textContent = '[ Menu ]';
+                    menuToggle.textContent = 'Menu';
                 }
             });
         });

@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Destinos no Brasil - Aerotec Agência de Viagens</title>
+    <meta name="description" content="Pacotes no Brasil com a Aerotec: Rio, Noronha, Chapada, Foz, Amazônia e Gramado.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylebr.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -10,162 +14,162 @@
 
     <div class="container-fixo" id="inicio">
         
-        <!-- Header -->
         <header class="header-rascunho">
             <div class="header-topo">
                 <div class="logo-box">
                     <img id="logo-header" class="logo-img tema-img" src="images/logo.webp" data-claro="images/logo.webp" data-escuro="images/logo%20dark.webp" alt="Logo Aerotec">
                 </div>
-                <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-principal">[ Menu ]</button>
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-principal">Menu</button>
             </div>
             <nav class="nav-rascunho" id="nav-principal">
-                <a href="index.html">[ INICIO ]</a>
-                <a href="#destinos">[ Cidades ]</a>
-                <a href="historia.html">[ Nossa História ]</a>
-                <a href="#contato">[ Fale Conosco ]</a>
-                <button type="button" id="botao-modo-dark" class="botao-falso botao-modo-dark">[ Modo Dark ]</button>
+                <a href="index.html">Início</a>
+                <a href="brasil.html" class="ativo">Brasil</a>
+                <a href="europa.html">Europa</a>
+                <a href="asia.html">Ásia</a>
+                <a href="historia.html">Nossa História</a>
+                <a href="#contato">Fale Conosco</a>
+                <button type="button" id="botao-modo-dark" class="botao-falso botao-modo-dark">Modo Dark</button>
             </nav>
         </header>
 
-        <!-- Banner Hero -->
         <section class="hero-rascunho">
             <img id="hero-banner" class="hero-imagem tema-img" src="images/banner.webp" data-claro="images/banner.webp" data-escuro="images/banner%20dark.webp" alt="Banner Brasil Aerotec">
+            <div class="hero-legenda">
+                <span>América do Sul</span>
+                <h2>Brasil</h2>
+            </div>
         </section>
 
-        <!-- Grid de Cidades do Brasil -->
         <section id="destinos" class="secao-rascunho">
-            <h3>📌 Destinos no Brasil que o pessoal mais está amando:</h3>
+            <h3>Cidades e regiões para cruzar o Brasil</h3>
             <div class="grid-destinos">
         
-                <!-- Rio de Janeiro -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/rio_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/rio.webp" alt="Rio de Janeiro">
+                            <source srcset="images/pag.brasil_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/rio cidade.jpg" alt="Rio de Janeiro">
                         </picture>
                     </div>
-                    <h4>[ Rio de Janeiro ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Rio de Janeiro</h4>
+                    <p class="preco">A partir de R$ 2.890</p>
+                    <p class="card-desc">5 noites · aéreo, hotel 4★, transfers e city tour na Zona Sul.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
         
-                <!-- Salvador -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/salvador_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/salvador.webp" alt="Salvador">
+                            <source srcset="images/pag.brasil_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/fernando de noronha.jpg" alt="Fernando de Noronha">
                         </picture>
                     </div>
-                    <h4>[ Salvador ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Fernando de Noronha</h4>
+                    <p class="preco">A partir de R$ 8.450</p>
+                    <p class="card-desc">6 noites · voo, pousada, taxas ambientais e passeio de barco.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
         
-                <!-- Foz do Iguaçu -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/foz_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/foz.webp" alt="Foz do Iguaçu">
+                            <source srcset="images/pag.brasil_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/chapada-diamantina.jpg" alt="Chapada Diamantina">
                         </picture>
                     </div>
-                    <h4>[ Foz do Iguaçu ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Chapada Diamantina</h4>
+                    <p class="preco">A partir de R$ 3.190</p>
+                    <p class="card-desc">5 noites · aéreo até Lençóis, pousada e trekking nas cachoeiras.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
 
-                <!-- Gramado -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/gramado_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/gramado.webp" alt="Gramado">
+                            <source srcset="images/pag.brasil_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/foz di iguaçu.jpeg" alt="Foz do Iguaçu">
                         </picture>
                     </div>
-                    <h4>[ Gramado ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Foz do Iguaçu</h4>
+                    <p class="preco">A partir de R$ 2.640</p>
+                    <p class="card-desc">4 noites · aéreo, hotel, transfers e ingresso das Cataratas.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
 
-                <!-- São Paulo -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/sp_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/sp.webp" alt="São Paulo">
+                            <source srcset="images/pag.brasil_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/manaus.htm" alt="Amazônia, Manaus">
                         </picture>
                     </div>
-                    <h4>[ São Paulo ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Amazônia (Manaus)</h4>
+                    <p class="preco">A partir de R$ 4.780</p>
+                    <p class="card-desc">5 noites · lodge, pensão completa e passeio de canoa ao entardecer.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
 
-                <!-- Fernando de Noronha -->
                 <div class="card-destino">
                     <div class="imagem-box">
                         <picture>
-                            <source srcset="images/noronha_mobile.webp" media="(max-width: 768px)">
-                            <img src="images/noronha.webp" alt="Fernando de Noronha">
+                            <source srcset="images/pag.brasil_mobile.webp" media="(max-width: 768px)">
+                            <img src="images/gramado.jpg" alt="Gramado">
                         </picture>
                     </div>
-                    <h4>[ Fernando de Noronha ]</h4>
-                    <p>[ Quanto custa + o que inclui ]</p>
-                    <div class="botao-falso">[ Quero dar uma olhada ]</div>
+                    <h4>Gramado</h4>
+                    <p class="preco">A partir de R$ 2.470</p>
+                    <p class="card-desc">4 noites · aéreo até Porto Alegre, hotel no centro e vinícolas.</p>
+                    <div class="botao-falso">Quero dar uma olhada</div>
                 </div>
         
             </div>
         </section>
 
-        <!-- Vantagens do Brasil -->
         <section class="secao-rascunho bkg-papel">
-            <h3>💡 Por que planejar sua viagem pelo Brasil com a gente?</h3>
+            <h3>Por que planejar o Brasil com a gente</h3>
             <div class="grid-vantagens">
                 <div class="card-vantagem">
-                    <div class="icone-box">✈️</div>
-                    <h4>[ Voos Diretos ]</h4>
-                    <p>[ As melhores conexões e parceiros para você viajar com tranquilidade pelo país ]</p>
+                    <div class="icone-box">🌿</div>
+                    <h4>Brasil de verdade</h4>
+                    <p>Roteiros que misturam cartão-postal com trilha, comida local e tempo de sobra.</p>
                 </div>
                 <div class="card-vantagem">
-                    <div class="icone-box">🏖️</div>
-                    <h4>[ Dicas Locais ]</h4>
-                    <p>[ Recomendações dos melhores pontos e praias fora da rota tradicional ]</p>
+                    <div class="icone-box">🚐</div>
+                    <h4>Logística resolvida</h4>
+                    <p>Voos, transfers e hospedagem alinhados para você não perder o dia.</p>
                 </div>
                 <div class="card-vantagem">
                     <div class="icone-box">🛎️</div>
-                    <h4>[ Suporte Nacional ]</h4>
-                    <p>[ Atendimento rápido e em português 24h durante toda a sua viagem ]</p>
+                    <h4>Suporte pertinho</h4>
+                    <p>Atendimento em português se o plano mudar no meio do caminho.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Rodapé -->
         <footer class="footer-rascunho">
             <div class="coluna-footer">
                 <img id="logo-footer" class="logo-footer logo-img tema-img" src="images/logo.webp" data-claro="images/logo.webp" data-escuro="images/logo%20dark.webp" alt="Logo Aerotec">
                 <p>Aerotec Agência de Viagens</p>
             </div>
             <div class="coluna-footer">
-                <strong>Links Importantes</strong>
-                <p>• <a href="contratos.html" style="text-decoration: none; color: inherit;">Contratos e Regras</a></p>
-                <p>• <a href="politicas.html" style="text-decoration: none; color: inherit;">Políticas de Cancelamento</a></p>
+                <strong>Links importantes</strong>
+                <p>• <a href="contratos.html">Contratos e Regras</a></p>
+                <p>• <a href="politicas.html">Políticas de Cancelamento</a></p>
             </div>
             <div class="coluna-footer">
                 <strong>Onde nos achar</strong>
-                <p>• @Aerotec-agencia</p>
-                <p>• /Aerotec-agencia</p>
+                <p>• <a href="https://instagram.com/Aerotec-agencia">@Aerotec-agencia</a></p>
+                <p>• <a href="https://facebook.com/Aerotec-agencia">/Aerotec-agencia</a></p>
             </div>
             <div id="contato" class="coluna-footer">
-                <strong>[ Receba nossas cartas ]</strong>
-                <div class="input-falso">[ Seu melhor e-mail... ]</div>
-                <div class="botao-falso">[ Quero receber ]</div>
+                <strong>Receba nossas cartas</strong>
+                <input class="input-falso" type="email" name="email" placeholder="Seu melhor e-mail" autocomplete="email">
+                <button type="button" class="botao-falso">Quero receber</button>
             </div>
         </footer>
 
     </div>
 
-    <!-- Script idêntico ao do index.html -->
     <script>
         const botaoModoDark = document.getElementById('botao-modo-dark');
         const imagensTema = document.querySelectorAll('.tema-img');
@@ -178,7 +182,7 @@
                 img.src = ativarDark ? img.dataset.escuro : img.dataset.claro;
             });
 
-            botaoModoDark.textContent = ativarDark ? '[ Modo Claro ]' : '[ Modo Dark ]';
+            botaoModoDark.textContent = ativarDark ? 'Modo Claro' : 'Modo Dark';
         });
 
         const menuToggle = document.getElementById('menu-toggle');
@@ -187,7 +191,7 @@
         menuToggle.addEventListener('click', () => {
             const aberto = navPrincipal.classList.toggle('aberto');
             menuToggle.setAttribute('aria-expanded', String(aberto));
-            menuToggle.textContent = aberto ? '[ Fechar ]' : '[ Menu ]';
+            menuToggle.textContent = aberto ? 'Fechar' : 'Menu';
         });
 
         navPrincipal.querySelectorAll('a').forEach((link) => {
@@ -195,7 +199,7 @@
                 if (window.matchMedia('(max-width: 768px)').matches) {
                     navPrincipal.classList.remove('aberto');
                     menuToggle.setAttribute('aria-expanded', 'false');
-                    menuToggle.textContent = '[ Menu ]';
+                    menuToggle.textContent = 'Menu';
                 }
             });
         });
